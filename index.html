@@ -1,0 +1,141 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Text Box</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .content {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow {
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            margin-left: 5px;
+        }
+
+        .hidden-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content" id="content">
+            <h1 style="color: aqua;">კითხვები</h1>
+            <div style="color: aqua;" class="arrow" id="arrow">&#9660;</div>
+        </div>
+        <div class="hidden-content" id="hiddenContent">
+            <p>პასუხი რომელიც უნდა ჩამოიშალოს
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var arrow = document.getElementById('arrow');
+        var hiddenContent = document.getElementById('hiddenContent');
+
+        arrow.addEventListener('click', function () {
+            hiddenContent.style.display = (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') ? 'block' : 'none';
+        });
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Text Box</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .content {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow {
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            margin-left: 5px;
+        }
+
+        .hidden-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content" id="content">
+            <h1 style="color: aqua;">კითხვები</h1>
+            <div style="color: aqua;" class="arrow" id="arrow">&#9660;</div>
+        </div>
+        <div class="hidden-content" id="hiddenContent">
+            <p>პასუხი რომელიც უნდა ჩამოიშალოს</p>
+        </div>
+    </div>
+
+    <script>
+        var arrow = document.getElementById('arrow');
+        var hiddenContent = document.getElementById('hiddenContent');
+
+        arrow.addEventListener('click', function () {
+            if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+                hiddenContent.style.display = 'block';
+                arrow.innerHTML = '&#9650;'; // Change arrow to face upwards
+            } else {
+                hiddenContent.style.display = 'none';
+                arrow.innerHTML = '&#9660;'; // Change arrow to face downwards
+            }
+        });
+    </script>
+</body>
+
+</html>
